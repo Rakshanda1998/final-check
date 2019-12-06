@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Movie crusier</title>
+		<link rel="stylesheet" type="text/css" href="./style/style.css"/>
+	</head>
+	<body>
+		<header>
+			<span>
+				Movie Crusier
+			</span>
+			<img class="img" src="./images/logo.png"/>
+			<a id="movie" href="movie-list-admin.html">Movies</a>
+		</header>
+		<div class="cont">
+			<h2>Edit Movie</h2>
+			<form name="mymovie" method="post" action="" onSubmit="return validation()">
+				<table>
+					<tr>
+						<td colspan="4">Title</td>
+					</tr>
+					
+					<tr>
+						<td colspan="4"><input type="text" id="title" name="txtTitle" value="Avengers - End Game" size="80"></td>
+					</tr>
+					
+					<tr>
+						<td>Gross($)</td>
+						<td>Active</td>
+						<td>Date of Launch</td>
+						<td>Game</td>
+					</tr>
+					
+					<tr>
+						<td><input class="title" type="text" id="gross" name="txtTGross" value="2787965087"/></td>
+						<td><input type="radio" id="rd1" name="rdyes" vlaue="Yes" checked />Yes
+							<input type="radio" id="rd2" name="rdyes"/>No</td>
+						<td><input type=</td>
+			            <td>
+							<select name="genre">
+								<option value="fitn">Science Fiction</option>
+								<option value="hero">Superhero</option>
+								<option value="romance">Romance</option>
+								<option value="cmdy">Comedy</option>
+								<option value="adtr">Adventure</option>
+								<option value="thlr">Thriller</option>
+							</select>
+						</td>
+					</tr>
+						
+					<tr>
+						<td><input type="checkbox" id="chk1' name="chk1" checked />Free Delivery</td>
+					</tr>
+					
+					<tr>
+						<td><input class="butn" type="Submit" name="Submit" onClick="validate"/></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+				
+		<footer>
+			<span>
+				copyright@2019
+			</span>
+		</footer>
+	</body>
+</html>

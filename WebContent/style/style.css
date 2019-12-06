@@ -1,1 +1,79 @@
-/* Add styles for application here */
+header {
+	background-color: #4d32e6;
+	height: 50px;
+	color: #ffffff;
+}
+
+body {
+	height: 100%;
+}
+
+footer {
+	background-color: #c0c7bf;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+}
+
+img {
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+
+#movie {
+	float: right;
+	color: #ffffff;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+span {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 18pt;
+}
+
+h2, table {
+	margin-left: 50px;
+}
+
+.cont {
+	border: 0px;
+	height:810px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.title {
+	text-align: left;
+	width: 250px:
+}
+
+.box {
+	text-align: right;
+	width: 150px;
+}
+
+.mid {
+	text-align: center;
+	width: 110px;
+}
+
+.butn {
+	background-color: #4d32e6;
+	color: white;
+	width: 150px;
+	height: 30px;
+}
+
+#para {
+	color: #1db331;
+}
+
+#p {
+	color: #1db331;
+	text-align: center;
+}
