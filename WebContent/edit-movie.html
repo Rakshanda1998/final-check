@@ -18,7 +18,7 @@
 			<form name="mymovie" method="post" action="edit-movie-status.html" onSubmit="return validation()">
 				<table>
 					<tr>
-						<td colspan="4">Title</td>
+						<td colspan="4"><label for="title">Title</label></td>
 					</tr>
 					
 					<tr>
@@ -26,16 +26,16 @@
 					</tr>
 					
 					<tr>
-						<td>Gross($)</td>
-						<td>Active</td>
-						<td>Date of Launch</td>
-						<td>Game</td>
+						<td><label for="gross">Gross($)</label></td>
+						<td><label for="mid">Active</label></td>
+						<td><label for="launch">Date of Launch</label></td>
+						<td><label for="genre">Genre</label></td>
 					</tr>
 					
 					<tr>
 						<td><input class="title" type="text" id="gross" name="txtGross" value="2787965087"/></td>
-						<td><input type="radio" id="rd1" name="rdyes" vlaue="Yes" checked />Yes
-							<input type="radio" id="rd2" name="rdyes"/>No</td>
+						<td><input type="radio" id="rd1" name="rdyes" vlaue="Yes" checked /><label for="rd1">Yes</label>
+							<input type="radio" id="rd2" name="rdyes"/><label for="rd2">No</label></td>
 						<td><input type="text" id="launch" name="txtLaunch" value="27/04/2022"></td>
 			            <td>
 							<select name="genre">
@@ -50,7 +50,7 @@
 					</tr>
 						
 					<tr>
-						<td><input type="checkbox" id="chk1" name="chk1" checked />Free Delivery</td>
+						<td><input type="checkbox" id="chk1" name="chk1" checked />Has Teaser</td>
 					</tr>
 					
 					<tr>
