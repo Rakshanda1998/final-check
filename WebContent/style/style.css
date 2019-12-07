@@ -1,5 +1,5 @@
 header {
-	background-color: #4d32e6;
+	background-color: #4e68cf;
 	height: 50px;
 	color: #ffffff;
 }
@@ -76,4 +76,18 @@ h2, table {
 #p {
 	color: #1db331;
 	text-align: center;
+}
+
+#gry {
+	color: #a8a59d;
+	text-align: center;
+}
+
+.clor {
+	color: #106bc4;
+	text-align: center;
+}
+
+.blk {
+	color: #000000;
 }

@@ -3,6 +3,7 @@
 	<head>
 		<title>Movie crusier</title>
 		<link rel="stylesheet" type="text/css" href="./style/style.css"/>
+		<script src="./js/script.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<header>
@@ -14,7 +15,7 @@
 		</header>
 		<div class="cont">
 			<h2>Edit Movie</h2>
-			<form name="mymovie" method="post" action="" onSubmit="return validation()">
+			<form name="mymovie" method="post" action="edit-movie-status.html" onSubmit="return validation()">
 				<table>
 					<tr>
 						<td colspan="4">Title</td>
@@ -32,10 +33,10 @@
 					</tr>
 					
 					<tr>
-						<td><input class="title" type="text" id="gross" name="txtTGross" value="2787965087"/></td>
+						<td><input class="title" type="text" id="gross" name="txtGross" value="2787965087"/></td>
 						<td><input type="radio" id="rd1" name="rdyes" vlaue="Yes" checked />Yes
 							<input type="radio" id="rd2" name="rdyes"/>No</td>
-						<td><input type=</td>
+						<td><input type="text" id="launch" name="txtLaunch" value="27/04/2022"></td>
 			            <td>
 							<select name="genre">
 								<option value="fitn">Science Fiction</option>
@@ -49,11 +50,11 @@
 					</tr>
 						
 					<tr>
-						<td><input type="checkbox" id="chk1' name="chk1" checked />Free Delivery</td>
+						<td><input type="checkbox" id="chk1" name="chk1" checked />Free Delivery</td>
 					</tr>
 					
 					<tr>
-						<td><input class="butn" type="Submit" name="Submit" onClick="validate"/></td>
+						<td colspan="2"><input class="butn" type="Submit" name="Submit" value="Save" onClick="validate"/></td>
 					</tr>
 				</table>
 			</form>
