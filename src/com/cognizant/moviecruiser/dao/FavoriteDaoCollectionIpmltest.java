@@ -21,15 +21,18 @@ public class FavoriteDaoCollectionIpmltest {
 
 	private static void testAddFavoriteItem() throws FavoriteEmptyException {
 		// TODO Auto-generated method stub
-		FavoriteDao favoriteDao = new FavoriteDaoCollectionImpl();
-		favoriteDao.addFavoriteItems(1, 5L);
-		favoriteDao.addFavoriteItems(1, 3L);
-		List<MovieItem> movieItemListCustomer = favoriteDao.getAllFavoriteItems(1);
-		System.out.println("***Favorite Movies to Check-Out***");
-		for (MovieItem movieItem : movieItemListCustomer) {
-			System.out.println(movieItem);
+		try {
+			FavoriteDao favoriteDao = new FavoriteDaoCollectionImpl();
+			favoriteDao.addFavoriteItems(1, 5L);
+			favoriteDao.addFavoriteItems(1, 3L);
+			List<MovieItem> movieItemListCustomer = favoriteDao.getAllFavoriteItems(1);
+			System.out.println("***Favorite Movies to Check-Out***");
+			for (MovieItem movieItem : movieItemListCustomer) {
+				System.out.println(movieItem);
+			}
+		} catch (Exception ex) {
+			System.out.println(ex);
 		}
-
 	}
 
 	private static void testGetAllFavoriteItems() throws FavoriteEmptyException {
@@ -47,7 +50,7 @@ public class FavoriteDaoCollectionIpmltest {
 
 	}
 
-	private static void testRemoveFavoriteItem() {
+	private static void testRemoveFavoriteItem() throws FavoriteEmptyException {
 		// TODO Auto-generated method stub
 		FavoriteDao favoriteDao = new FavoriteDaoCollectionImpl();
 		System.out.println("\n***Favorite Movies Removed by Customer***");

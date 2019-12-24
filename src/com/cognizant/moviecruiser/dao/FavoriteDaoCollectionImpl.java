@@ -18,7 +18,7 @@ public class FavoriteDaoCollectionImpl implements FavoriteDao {
 	}
 
 	@Override
-	public void addFavoriteItems(long userId, long movieItemId) {
+	public void addFavoriteItems(long userId, long movieItemId) throws FavoriteEmptyException {
 		// TODO Auto-generated method stub
 		try {
 			MovieItemDao movieItemDao = new MovieItemDaoCollectionImpl();
@@ -42,18 +42,22 @@ public class FavoriteDaoCollectionImpl implements FavoriteDao {
 	@Override
 	public List<MovieItem> getAllFavoriteItems(long userId) throws FavoriteEmptyException {
 		// TODO Auto-generated method stub
-		List<MovieItem> movieItemList = userFavorites.get(userId).getMovieItemList();
-		Favorite favorite = userFavorites.get(userId);
-		int numberOfFavorites = 0;
-		if (favorite == null || favorite.getMovieItemList()==null || movieItemList.isEmpty()) {
-			throw new FavoriteEmptyException();
-		} else {
-			for (MovieItem movieItem : movieItemList) {
-				numberOfFavorites += movieItem.getGross();
+		try {
+			List<MovieItem> movieItemList = userFavorites.get(userId).getMovieItemList();
+			Favorite favorite = userFavorites.get(userId);
+			int numberOfFavorites = 0;
+			if (favorite == null || favorite.getMovieItemList() == null || movieItemList.isEmpty()) {
+			} else {
+				for (MovieItem movieItem : movieItemList) {
+					numberOfFavorites += movieItem.getGross();
+				}
 			}
+			favorite.setNumberOfFavorites(numberOfFavorites);
+			return movieItemList;
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
 		}
-		favorite.setNumberOfFavorites(numberOfFavorites);
-		return movieItemList;
+		return null;
 	}
 
 	@Override
