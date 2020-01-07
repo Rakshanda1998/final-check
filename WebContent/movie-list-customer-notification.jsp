@@ -33,7 +33,7 @@
 				<c:forEach items="${movieItemList }" var="movie">
 				<tr>
 					<td class="title"><c:out value="${movie.title }"></c:out></td>
-					<td class="gross"><c:out value="${movie.gross }"></c:out></td>
+					<td class="box"><c:out value="${movie.gross }"></c:out></td>
 					<td class="mid"><c:out value="${movie.genre }"></c:out></td>
 					<td class="mid"><c:if test="${movie.hasTeaser }"> Yes</c:if>
 						<c:if test="${!movie.hasTeaser }">No</c:if></td>

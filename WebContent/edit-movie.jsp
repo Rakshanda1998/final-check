@@ -30,7 +30,7 @@
 				</tr>
 
 				<tr>
-					<td><label for="gross">Gross($)</label></td>
+					<td><label for="box">Gross($)</label></td>
 					<td><label for="mid">Active</label></td>
 					<td><label for="launch">Date of Launch</label></td>
 					<td><label for="mid">Genre</label></td>
