@@ -61,7 +61,7 @@
 
 				<tr>
 					<td colspan="2"><input type="checkbox" name="Chbox" Checked
-						<c:if test="${movieItem.hasTeaser eq 'true'}"></c:if>
+						<c:if test="${movieItem.hasTeaser eq 'true'}"> </c:if>
 						<c:if test="${movieItem.hasTeaser eq 'false'}"></c:if>> <label
 						for="chbox">Has Teaser</label></td>
 				</tr>

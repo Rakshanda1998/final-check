@@ -41,8 +41,7 @@
 					<td class="mid">${movie.genre }</td>
 					<td class="mid"><c:if test="${movie.hasTeaser }"> Yes</c:if>
 						<c:if test="${!movie.hasTeaser }">No</c:if></td>
-					<td class="mid"><a
-						href="ShowEditMovieItem?movieItemId=${movie.id }" target="_blank">Edit</a></td>
+					<td class="mid"><a href="ShowEditMovieItem?movieItemId=${movie.id }" target="_blank">Edit</a></td>
 				</tr>
 			</c:forEach>
 
