@@ -128,7 +128,7 @@ WHERE ft_us_id=2;
 -----------------------------------------------------------------------
 -- Total Groos($) of Favorite Movies
 -----------------------------------------------------------------------
-SELECT count(mv_title) AS total
+SELECT COUNT(mv_title) AS total
 FROM movie_item
 INNER JOIN favorite
 ON ft_pr_id=mv_id  
