@@ -14,8 +14,14 @@ VALUES
 ------------------------------------------
 -- Displaying Movie Table
 ------------------------------------------
-select * from movie_item;
-
+select         
+ mv_title as Title,
+ mv_gross as Gross,
+ mv_active as Active,
+ mv_date_of_launch as Date_of_Launch,
+ mv_genre as Genre,
+ mv_has_teaser as Teaser
+from movie_item;
 
 
 -----------------------------------------------------------------------
@@ -28,7 +34,14 @@ where mv_id=1;
 -----------------------------------------
 -- Displaying Movie Table
 -----------------------------------------
-select * from movie_item;
+select         
+ mv_title as Title,
+ mv_gross as Gross,
+ mv_active as Active,
+ mv_date_of_launch as Date_of_Launch,
+ mv_genre as Genre,
+ mv_has_teaser as Teaser
+from movie_item;
 
 
 -----------------------------------------------------------------------
@@ -51,7 +64,10 @@ VALUES
 -----------------------------------------
 -- Displaying User Movie Table
 -----------------------------------------
-select * from user;
+SELECT          
+ us_id AS Id,
+ us_title AS Title
+FROM user;
 
 
 
@@ -70,7 +86,11 @@ VALUES
 -----------------------------------------
 -- Displaying User Movie Table
 -----------------------------------------
-select * from favorite;
+SELECT 
+ ft_id as Title,
+ ft_us_id AS Gross,
+ ft_pr_id AS Genre 
+FROM favorite;
 
 
 
@@ -86,23 +106,22 @@ WHERE ft_us_id=2;
 -----------------------------------------
 -- Displaying User Movie Table
 -----------------------------------------
-select * from favorite;
+SELECt
+ ft_id as Title,
+ ft_us_id AS Gross,
+ ft_pr_id AS Genre 
+FROM favorite;
 
 
 
 -----------------------------------------------------------------------
--- Total Groos($) of Favorite Movies
+-- Total Number of Favorite Movies
 -----------------------------------------------------------------------
 SELECT COUNT(mv_title) AS no_of_favorites
 FROM movie_item
 INNER JOIN favorite
 ON ft_pr_id=mv_id
 WHERE ft_us_id=2;
-
------------------------------------------
--- Displaying Favorites from Movie Table
------------------------------------------
-select * from favorite;
 
 
 
@@ -126,9 +145,9 @@ WHERE ft_us_id=2;
 
 
 -----------------------------------------------------------------------
--- Total Groos($) of Favorite Movies
+-- Show Total Number of Favorite Movies
 -----------------------------------------------------------------------
-SELECT COUNT(mv_title) AS total
+SELECT COUNT(mv_title) AS no_of_favorites
 FROM movie_item
 INNER JOIN favorite
 ON ft_pr_id=mv_id  
