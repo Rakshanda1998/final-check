@@ -12,8 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.cognizant.moviecruiser.dao.FavoriteDao;
 import com.cognizant.moviecruiser.dao.FavoriteDaoCollectionImpl;
+import com.cognizant.moviecruiser.dao.FavoriteDaoSqlImpl;
 import com.cognizant.moviecruiser.dao.MovieItemDao;
 import com.cognizant.moviecruiser.dao.MovieItemDaoCollectionImpl;
+import com.cognizant.moviecruiser.dao.MovieItemDaoSqlImpl;
 import com.cognizant.moviecruiser.model.MovieItem;
 
 /**
@@ -38,9 +40,9 @@ public class AddToFavoriteServlet extends HttpServlet {
 		try {
 			long userId = 1L;
 			long movieItemId = Long.parseLong(request.getParameter("movieItemId"));
-			FavoriteDao favoriteDao = new FavoriteDaoCollectionImpl();	
+			FavoriteDao favoriteDao = new FavoriteDaoSqlImpl();	
 			favoriteDao.addFavoriteItems(1, movieItemId);
-			MovieItemDao movieItemDao = new MovieItemDaoCollectionImpl();
+			MovieItemDao movieItemDao = new MovieItemDaoSqlImpl();
 			List<MovieItem> movieItemListCustomer = movieItemDao.getMovieItemListCustomer();
 			request.setAttribute("movieItemList",movieItemListCustomer);
 			

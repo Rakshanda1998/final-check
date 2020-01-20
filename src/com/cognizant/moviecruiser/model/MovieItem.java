@@ -5,6 +5,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MovieItem {
+	public MovieItem() {
+		super();
+	}
+
 	private long id;
 	private String title;
 	private long gross;
@@ -46,8 +50,8 @@ public class MovieItem {
 		return gross;
 	}
 
-	public void setGross(long gross) {
-		this.gross = gross;
+	public void setGross(long f) {
+		this.gross = f;
 	}
 
 	public boolean isActive() {

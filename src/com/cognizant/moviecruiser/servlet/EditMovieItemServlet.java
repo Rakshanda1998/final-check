@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cognizant.moviecruiser.dao.MovieItemDao;
-import com.cognizant.moviecruiser.dao.MovieItemDaoCollectionImpl;
+import com.cognizant.moviecruiser.dao.MovieItemDaoSqlImpl;
 import com.cognizant.moviecruiser.model.MovieItem;
 import com.cognizant.moviecruiser.util.DateUtil;
 
@@ -56,7 +56,7 @@ public class EditMovieItemServlet extends HttpServlet {
 			boolean hasTeaser = request.getParameter("Chbox") != null;
 
 			MovieItem movieItem = new MovieItem(id, title, gross, active, dateOfLaunch, genre, hasTeaser);
-			MovieItemDao movieItemDao = new MovieItemDaoCollectionImpl();
+			MovieItemDao movieItemDao = new MovieItemDaoSqlImpl();
 			movieItemDao.modifyMovieItem(movieItem);
 			request.setAttribute("msg", "Movies Saved Successfully");
 			RequestDispatcher rqd = request.getRequestDispatcher("edit-movie-status.jsp");

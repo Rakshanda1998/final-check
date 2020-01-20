@@ -56,7 +56,7 @@ public class MovieItemDaoCollectionImlpTest {
 	private static void testModifyMenuItem() throws ParseException {
 		// TODO Auto-generated method stub
 		MovieItemDao movieItemDao = new MovieItemDaoCollectionImpl();
-		MovieItem m = new MovieItem(4, "Star War", 8547213695L, true, DateUtil.convertToDate("26/01/2017"), "Tragedy",
+		MovieItem m = new MovieItem(4, "Frozen2", 8547213695L, false, DateUtil.convertToDate("26/01/2017"), "Tragedy",
 				true);
 		movieItemDao.modifyMovieItem(m);
 
